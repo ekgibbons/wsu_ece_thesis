@@ -18,7 +18,6 @@
 %%%%% 
 
 \LoadClass[12pt]{report}
-\RequirePackage{geometry}
 \RequirePackage{setspace}
 \RequirePackage{nomencl}
 \makenomenclature
@@ -30,19 +29,10 @@
 % We need 1" margins except on the binding edge, where it is 1 1/2"
 % Theses may be either single or double sided
 \if@twoside
-\setlength\oddsidemargin   {36.1\p@}
-\setlength\evensidemargin  {0\p@}
-\setlength\marginparwidth  {40\p@}
+\usepackage[top=1in, bottom=1in, right=1in, left=1.5in, assymetric]{geometry} % margins
 \else
-\setlength\oddsidemargin   {36.1\p@}
-\setlength\evensidemargin  {36.1\p@}
-\setlength\marginparwidth  {40\p@}
+\usepackage[top=1in, bottom=1in, right=1in, left=1.5in]{geometry} % margins
 \fi
-
-\marginparsep 10pt
-\setlength{\nomlabelwidth}{2cm}
-% \oddsidemargin 0.5in \evensidemargin 0in
-% \marginparwidth 40pt 
 
 %%%%% 
 %%%%% OPTIONS
@@ -64,7 +54,6 @@
 
 \figurespagetrue
 \tablespagetrue
-\nomenclaturepagetrue
 
 \renewcommand{\contentsname}{Table of Contents}
 
